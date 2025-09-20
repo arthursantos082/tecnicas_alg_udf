@@ -5,11 +5,9 @@ int main() {
     char nome[50];
     char sexo;
 
-    // Solicita a média mínima
     printf("Digite a media para aprovacao: ");
     scanf("%f", &mediaMin);
 
-    // Coleta os dados do aluno
     printf("Digite o nome do aluno: ");
     scanf(" %[^\n]", nome); // lê até espaço
     printf("Digite o sexo (M/F): ");
@@ -17,10 +15,8 @@ int main() {
     printf("Digite as tres notas: ");
     scanf("%f %f %f", &n1, &n2, &n3);
 
-    // Calcula a média
     mediaFinal = (n1 + n2 + n3) / 3;
 
-    // Ajusta texto de acordo com o sexo
     if (mediaFinal >= mediaMin) {
         if (sexo == 'M' || sexo == 'm') {
             printf("O aluno %s foi aprovado com media %.2f\n", nome, mediaFinal);
